@@ -1,0 +1,180 @@
+@font-face {
+    font-Family: Poppins;
+    src: url(fonty/Poppins-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(fonty/Poppins-ExtraBold.ttf);
+    font-weight: bold;
+}
+
+html {
+    background-color: #414042
+}
+
+body {
+    font-family: Poppins;
+    font-size: 14px;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 120px 0px 0px 0px;
+    background-color: #F9F9F9;
+}
+
+body > header {                         /*header přímo pod body, bez > to platí pro všechny header*/
+    height: 100px;
+    width: 100%;
+
+    color: white;
+    background-color: #00386B;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: fixed;
+    z-index: 1; /*hlavička se bude zobrazovat nad všemi ostatními elementy*/
+    top: 0; /* umístí hlavičku na vrch stránky nezávise na padding v body*/
+}
+
+#logo {
+    background-image: url(obrazky/logo.png);
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40px;
+    margin: auto 0px;
+}
+
+#logo > * {     /*jen elementy přímo pod logo, bez > platí pro všechny elementy kdekoliv pod logo*/
+    margin: 0 0 0 50px;
+}
+
+#logo h1 {
+    font-size: 1.5em;
+    line-height: 1.2em;
+    font-weight: normal;
+    color: white;
+}
+
+#logo small {
+    text-transform: uppercase;
+    font-size: 0.85em;
+}
+
+nav {
+    margin: auto 0px;
+}
+nav ul {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    text-transform: uppercase;
+    font-size: 1em;
+
+}
+
+nav ul a {
+    margin: 0px 15px 0px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.tlacitko-kontakt {
+    padding: 5px 25px;
+    background-color: #EF6534;
+    border-radius: 25px;
+    text-transform: uppercase;
+
+}
+
+.active-page,
+nav ul a:hover {
+    border-bottom: solid 2px #EF6534;
+    filter: brightness(115%) contrast(85%);
+
+}
+
+h1,
+h2 {
+    color: #00386B;
+}
+
+article {
+    width: 960px;
+    margin: 0px auto;
+    padding: 20px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px grey;
+    background-color: #F9F9F9;
+}
+
+article h1 {
+    font-size: 2.3em;
+    text-transform: uppercase;
+    border-bottom: 4px solid red;
+}
+
+.avatar {
+    width: 200px;
+    float: right;
+    filter: grayscale(1);
+}
+
+.ikonka {
+    width: 50px;
+    float: left;
+}
+
+.kontakt-text-za-ikonkou {
+    /*padding-top:20px;*/
+    line-height: 60px;
+}
+
+footer {
+    text-align: center;
+    height: 100px;
+    color: white;
+    background-color: #414042;
+    margin-top: 20px;
+    padding: 50px 0 0 0;
+    box-sizing: border-box; /*bez border-box je výsledný element 50+100*/
+    clip-path: polygon(0 30px, 100% 0, 100% 105%, 0 105%);
+
+}
+
+table {
+    width: 800px;
+    margin: 0px auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+td {
+    width: 25%;
+    border: 0.5px solid black;
+}
+
+.cistic {
+    clear: both;
+}
+
+.centrovany {
+    text-align: center;
+}
+
+#reference img {
+    border: 1px solid gray;
+    padding: 6px;
+    box-shadow: 3px 3px 6px black;
+    margin-right: 6px;
+}
